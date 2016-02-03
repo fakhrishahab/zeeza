@@ -42,14 +42,18 @@ header{
 	ul{
 		@include clearfix;
 		list-style:none;
-		color:$greyDark;
 
 		li{
 			display:inline-block;
 			cursor:pointer;
 			text-transform:capitalize;
 
-			&:hover{
+			a{
+				text-decoration:none;
+				color:$greyDark;
+			}
+
+			&:hover a{
 				color:$blueGrey;
 			}
 
@@ -57,6 +61,7 @@ header{
 				content : '|';
 				display:inline-block;
 				margin:0 10px;
+				color:$greyDark;
 			}
 
 			&:last-child:after{
