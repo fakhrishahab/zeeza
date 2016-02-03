@@ -1,0 +1,24 @@
+{
+  "name": "zeeza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fakhrishahab/zeeza.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fakhrishahab/zeeza/issues"
+  },
+  "homepage": "https://github.com/fakhrishahab/zeeza#readme",
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.1.1"
+  }
+}

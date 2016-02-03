@@ -1,9 +1,12 @@
 @import 'font';
+@import 'variable';
+@import 'mixin';
 
 body{
 	background-color:#fff;
 	padding:0;
 	margin:0;
+	font-family : $arcon;
 }
 
 header{
@@ -15,13 +18,11 @@ header{
 .header-wrapper{
 	max-width:1200px;
 	width:100%;
-	border:1px solid red;
 	margin:0 auto;
 	height:100%;	
 }
 
 .header-logo{
-	border:1px solid red;
 	max-width:300px;
 	margin:0.8em 0;
 	display:inline-block;
@@ -33,8 +34,85 @@ header{
 }
 
 .header-menu{
-	border:1px solid red;
 	float:right;
 	max-width:800px;
-	height:40px;
+	vertical-align:middle;
+	margin:2.5em 0;
+
+	ul{
+		@include clearfix;
+		list-style:none;
+		color:$greyDark;
+
+		li{
+			display:inline-block;
+			cursor:pointer;
+			text-transform:capitalize;
+
+			&:hover{
+				color:$blueGrey;
+			}
+
+			&:after{
+				content : '|';
+				display:inline-block;
+				margin:0 10px;
+			}
+
+			&:last-child:after{
+				content : '';
+				margin:0;
+			}
+		}
+	}
+}
+
+.contact-header{
+	background:$greySmooth;
+	width:100%;
+	height:50px;
+	position:relative;
+}
+
+.contact-header-wrapper{
+	width:1200px;
+	position:relative;
+	height:100%;
+	margin:0 auto;
+	text-align:center;
+}
+
+.list-contact{
+	@include clearfix;
+	list-style:none;
+	margin:0.7em auto;
+	width:auto;
+	display:inline-block;
+	
+	li{
+		display:inline-block;
+		margin-right:50px;
+		white-space:nowrap;
+
+		&:last-child{
+			margin-right:0;
+		}
+
+		div{
+			display:inline-block;
+			margin-left:10px;
+
+			&:first-child{
+				width:auto !important;		
+				margin-left:0;
+			}
+
+			img{
+				max-height:25px;
+				vertical-align: middle;
+			}
+		}
+
+		
+	}
 }
