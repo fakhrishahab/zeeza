@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 
 var defaultTasks = [
 	'html_view',
+	'styles',
 	'style_sass',
 	'fonts',
 	'script',
@@ -15,6 +16,11 @@ var defaultTasks = [
 gulp.task('html_view', function(){
 	return gulp.src('./dev/app/**/*.*')
 		.pipe(gulp.dest('public/'))
+})
+
+gulp.task('styles', function(){
+	return gulp.src('./dev/assets/styles/**/*.css')
+		.pipe(gulp.dest('public/assets/styles'))
 })
 
 gulp.task('style_sass', function(){
@@ -30,8 +36,8 @@ gulp.task('fonts', function(){
 })
 
 gulp.task('script', function(){
-	return gulp.src('./dev/assets/script/**/*.*')
-		.pipe(gulp.dest('public/assets/script'))
+	return gulp.src('./dev/script/**/*.*')
+		.pipe(gulp.dest('public/script'))
 })
 
 gulp.task('images', function(){
@@ -46,7 +52,8 @@ gulp.task('clean', function(cb){
 gulp.task('watch', function(){
 	gulp.watch('./dev/app/**/*.*', ['html_view'])
 	gulp.watch('./dev/assets/styles/scss/**/*.scss', ['style_sass'])
-	gulp.watch('./dev/assets/**/*.*', ['fonts', 'script', 'images'])
+	gulp.watch('./dev/assets/**/*.*', ['fonts', 'images', 'styles'])
+	gulp.watch('./dev/script/**/*.*', ['script'])
 })
 
 gulp.task('default', ['clean'])

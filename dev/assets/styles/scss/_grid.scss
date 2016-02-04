@@ -1,0 +1,57 @@
+.grid-container{
+	box-sizing: border-box; 
+	max-width:1200px;
+}
+
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+     clear:both;
+}
+
+div[class*=col-]{
+	float:left;
+	box-sizing:border-box;
+	min-height:1px;
+	padding: 0;
+}
+
+/*.col-1{
+    width: 16.66%; 
+}
+.col-2{
+    width: 33.33%; 
+}
+.col-3{
+    width: 50%; 
+}
+.col-4{
+    width: 66.664%;
+}
+.col-5{
+    width: 83.33%;
+}
+.col-6{
+    width: 50%;
+}*/
+
+.col-12{
+	width:100%;
+}
+
+.col-9{
+	width:74.99%;
+}
+
+.col-3{
+	width:24.66%;
+}
+
+.col-4{
+	width:33.33%;
+}
+
+.col-5{
+	width:20%;
+}
