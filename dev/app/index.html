@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="zeeza">
 	<head>
 		<title>Zeeza Butik - Kids Warehouse</title>
 		<meta charset="utf-8">
@@ -9,91 +9,14 @@
 
 		<link type="text/css" rel="stylesheet" href="./assets/styles/style.css">
 		<link type="text/css" rel="stylesheet" href="./assets/styles/font_zeeza.css">
+
+		<script src="./script/lib/angular.min.js"></script>
+		<script src="./script/app.js"></script>
 	</head>
 	<body>
-		<header>
-			<div class="header-wrapper">
-				<div class="menu-toggle">
-					<span class="icon-bars"></span>
-				</div>
-				<div class="header-logo">
-					<img src="./assets/images/logo_zeeza.png" align="middle">
-				</div>
-
-				<div class="header-menu">
-					<ul>
-						<li>Cara Pemesanan</li>
-						<li>Daftar Reseller</li>
-						<li>Testimonial</li>
-						<li>Sahabat Zeeza</li>
-						<li>FAQ</li>
-					</ul>
-				</div>
-			</div>
-		</header>
-		<section class="contact-header">
-			<div class="contact-header-wrapper">
-				<ul class="list-contact">
-					<li>
-						<div><img src="./assets/images/logo_whatsapp.png"></div>
-						<div>0857 2012 3245</div>
-					</li>
-					<li>
-						<div><img src="./assets/images/logo_bbm.png"></div>
-						<div>52 94 87 8A</div>
-					</li>
-					<li>
-						<div><img src="./assets/images/logo_line.png"></div>
-						<div>ZeezaButik</div>
-					</li>
-					<li>
-						<div><img src="./assets/images/logo_instagram.png"></div>
-						<div>#Zeeza_Butik</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="navbar-wrapper">
-			<nav class="navbar-category">
-				<ul>
-					<li><a>Baby girl<span class="icon-angle-down"></span></a>
-						<ul class="active">
-							<li><a>headband</a></li>
-							<li><a>baju</a></li>
-							<li><a>prewalker</a></li>
-						</ul>
-					</li>
-					<li><a>Baby boy<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a>baju</a></li>
-							<li><a>prewalker</a></li>
-						</ul>
-					</li>
-					<li><a>girl's room<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a>atasan</a></li>
-							<li><a>rok & celana</a></li>
-							<li><a>jaket & rompi</a></li>
-							<li><a>piyama</a></li>
-							<li><a>dress</a></li>
-							<li><a>baju muslim</a></li>
-							<li><a>Aksesoris</a></li>
-						</ul>
-					</li>
-					<li><a>boy's room<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a>Kemeja & Polo shirt</a></li>
-							<li><a>jaket & rompi</a></li>
-							<li><a>baju</a></li>
-							<li><a>piyama</a></li>
-							<li><a>celana</a></li>
-							<li><a>Aksesoris</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</section>		
+		<div ng-include src="'partials/header.html'"></div>
+		<div ng-include src="'partials/contact_header.html'"></div>
+		<div ng-include src="'partials/navigate_menu.html'"></div>	
 
 		<section class="slide-wrapper">			
 			<div class="slide-img">
@@ -111,221 +34,108 @@
 			<div class="product-home">
 				<div class="grid-container">
 					<div class="row push-top">
-						<div class="col-5 product-container">
-							<div class="product-detail">
-								<div class="product-image" style="background-image:url(./assets/images/product/1.jpg)"></div>
-								<div class="product-description">
-									<span class="product-name">Atasan</span>
-									<span class="product-size">0 - 12 bln</span>
-									<span class="product-price">Rp. 120.000,-</span>
-									<span class="product-price-disc">Rp. 80.000,-</span>
-									<div class="new-product">
-										NEW
+						<div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
+							<a href="product_detail.html">
+								<div class="product-detail">
+									<div class="product-image" style="background-image:url(./assets/images/product/1.jpg)"></div>
+									<div class="product-description">
+										<span class="product-name">Atasan</span>
+										<span class="product-size">0 - 12 bln</span>
+										<span class="product-price">Rp. 120.000,-</span>
+										<span class="product-price-disc">Rp. 80.000,-</span>
+										<span class="new-product">
+											NEW
+										</span>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
-						<div class="col-5 product-container">
-							<div class="product-detail">
-								<div class="product-image" style="background-image:url(./assets/images/product/2.jpg)"></div>
-								<div class="product-description">
-									<span class="product-name">Atasan</span>
-									<span class="product-size">0 - 12 bln</span>
-									<span class="product-price">Rp. 120.000,-</span>
-									<span class="product-price-disc">Rp. 80.000,-</span>
-									<div class="new-product">
-										NEW
+						<div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
+							<a href="product_detail.html">
+								<div class="product-detail">
+									<div class="product-image" style="background-image:url(./assets/images/product/2.jpg)"></div>
+									<div class="product-description">
+										<span class="product-name">Atasan</span>
+										<span class="product-size">0 - 12 bln</span>
+										<span class="product-price">Rp. 120.000,-</span>
+										<span class="product-price-disc">Rp. 80.000,-</span>
+										<div class="new-product">
+											NEW
+										</div>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
-						<div class="col-5 product-container">
-							<div class="product-detail">
-								<div class="product-image" style="background-image:url(./assets/images/product/3.jpg)"></div>
-								<div class="product-description">
-									<span class="product-name">Atasan</span>
-									<span class="product-size">0 - 12 bln</span>
-									<span class="product-price">Rp. 120.000,-</span>
-									<span class="product-price-disc">Rp. 80.000,-</span>
-									<div class="new-product">
-										NEW
+						<div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
+							<a href="product_detail.html">
+								<div class="product-detail">
+									<div class="product-image" style="background-image:url(./assets/images/product/3.jpg)"></div>
+									<div class="product-description">
+										<span class="product-name">Atasan</span>
+										<span class="product-size">0 - 12 bln</span>
+										<span class="product-price">Rp. 120.000,-</span>
+										<span class="product-price-disc">Rp. 80.000,-</span>
+										<div class="new-product">
+											NEW
+										</div>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
-						<div class="col-5 product-container">
-							<div class="product-detail">
-								<div class="product-image" style="background-image:url(./assets/images/product/4.jpg)"></div>
-								<div class="product-description">
-									<span class="product-name">Atasan</span>
-									<span class="product-size">0 - 12 bln</span>
-									<span class="product-price">Rp. 120.000,-</span>
-									<span class="product-price-disc">Rp. 80.000,-</span>
-									<div class="new-product">
-										NEW
+						<div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
+							<a href="product_detail.html">
+								<div class="product-detail">
+									<div class="product-image" style="background-image:url(./assets/images/product/4.jpg)"></div>
+									<div class="product-description">
+										<span class="product-name">Atasan</span>
+										<span class="product-size">0 - 12 bln</span>
+										<span class="product-price">Rp. 120.000,-</span>
+										<span class="product-price-disc">Rp. 80.000,-</span>
+										<div class="new-product">
+											NEW
+										</div>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
-						<div class="col-5 product-container">
-							<div class="product-detail">
-								<div class="product-image" style="background-image:url(./assets/images/product/5.jpg)"></div>
-								<div class="product-description">
-									<span class="product-name">Atasan</span>
-									<span class="product-size">0 - 12 bln</span>
-									<span class="product-price">Rp. 120.000,-</span>
-									<span class="product-price-disc">Rp. 80.000,-</span>
-									<div class="new-product">
-										NEW
+						<div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
+							<a href="product_detail.html">
+								<div class="product-detail">
+									<div class="product-image" style="background-image:url(./assets/images/product/5.jpg)"></div>
+									<div class="product-description">
+										<span class="product-name">Atasan</span>
+										<span class="product-size">0 - 12 bln</span>
+										<span class="product-price">Rp. 120.000,-</span>
+										<span class="product-price-disc">Rp. 80.000,-</span>
+										<div class="new-product">
+											NEW
+										</div>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
-						<div class="col-5 product-container">
-							<div class="product-detail">
-								<div class="product-image" style="background-image:url(./assets/images/product/6.jpg)"></div>
-								<div class="product-description">
-									<span class="product-name">Atasan</span>
-									<span class="product-size">0 - 12 bln</span>
-									<span class="product-price">Rp. 120.000,-</span>
-									<span class="product-price-disc">Rp. 80.000,-</span>
-									<div class="new-product">
-										NEW
+						<div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
+							<a href="product_detail.html">
+								<div class="product-detail">
+									<div class="product-image" style="background-image:url(./assets/images/product/6.jpg)"></div>
+									<div class="product-description">
+										<span class="product-name">Atasan</span>
+										<span class="product-size">0 - 12 bln</span>
+										<span class="product-price">Rp. 120.000,-</span>
+										<span class="product-price-disc">Rp. 80.000,-</span>
+										<div class="new-product">
+											NEW
+										</div>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <div class="product-home">
-				<div class="product-wrapper push-top">
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/1.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Atasan</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>						
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/2.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Jeans Anak</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/3.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Celana</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/4.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Setelan</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/5.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Dress</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/6.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Dress</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/7.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Dress</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/1.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Dress</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/2.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Dress</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-					<div class="product-list">
-						<div class="product-image" style="background-image:url(./assets/images/product/3.jpg)"></div>
-						<div class="product-detail">
-							<span class="product-name">Dress</span>
-							<span class="product-size">0 - 12 bln</span>
-							<span class="product-price">Rp. 120.000,-</span>
-							<span class="product-price-disc">Rp. 80.000,-</span>
-							<div class="new-product">
-								NEW
-							</div>
-						</div>		
-					</div>
-
-				</div>
-			</div> -->
 		</section>
 
-		<section>
+		<section class="push-top">
 			<div class="brand-wrapper">
 				<div class="brand-header">
 					Our Brand
@@ -338,22 +148,17 @@
 				</div>
 			</div>
 		</section>
-
-		<footer>
-			<div class="footer-wrapper">
-				<div class="bank-partner push-top-bottom">
-					<span>bank partner</span>
-					<a><img src="./assets/images/logo_bca_small.png" alt=""></a>
-					<a><img src="./assets/images/logo_mandiri_small.png" alt=""></a>
-					<a><img src="./assets/images/logo_niaga_small.png" alt=""></a>
-				</div>
-
-				<div class="copyright">
-					copyright &copy; 2015. ZeezaButik.com
-				</div>
-			</div>
-		</footer>
-	</body>
+		
+		<div ng-include src="'partials/footer.html'"></div>
+		
+	</body>	
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./script/lib/routie.js"></script>
 	<script src="./script/script.js"></script>
+
+	<script>
+		routie('product/:id', function(id) {
+		    location.href="product.html?id="+id;
+		});		
+	</script>
 </html>

@@ -46,6 +46,10 @@
 		font-size:0.9em;
 	}
 
+	.contact-header{
+		height:auto;
+	}
+
 	.contact-header-wrapper{
 		max-width:100%;
 		height:100%;
@@ -53,12 +57,14 @@
 	}
 
 	.list-contact{
+		width:100%;
+		float:left;
 		margin:0;
 		padding:0;
 
 		li{
-			margin-right:10px;
-			padding:12px 0;
+			margin:0;
+			padding:5px;
 			font-size:0.7em;
 
 			& img{
@@ -80,12 +86,15 @@
 	}
 
 	.navbar-category{
+		overflow-y:scroll;
 		margin:0;
 		max-width:90%;
+		top:50px;
 		width:90%;
 		height:100%;
 		display:block;
 		float:left;
+		position:fixed;
 
 		ul{	
 			width:100%;
@@ -126,6 +135,74 @@
 			}
 		}
 	}
+
+	.flash-wrapper{
+		float:left;
+	}
+
+	.flash-news{
+		font-size:0.9em;
+		padding:5px;
+		box-sizing:border-box;
+	}
+
+	.brand-header{
+	
+		font-size:1.5em;
+		text-align:center;
+
+		&:before,
+		&:after{
+			content:'';
+			display:block;
+			position:relative;
+			width:35%;
+		}
+
+		&:after{
+			top:-12px;
+			left:65%;
+		}
+	}
+
+	.brand-logo{		
+		img{
+			max-height:70px;			
+		}
+	}
+
+	.bank-partner{
+		float:none;
+		text-align:center;
+
+		span{
+			margin:0;
+		}
+
+		img{
+			max-height:20px;
+			margin-right:10px;
+		}
+	}
+
+	.copyright{
+		float:none;
+		text-align:center;
+		padding:20px 0;
+	}
+
+	.content-product-wrapper{
+		padding:10px;
+	}
+
+	.sidebar-header{
+		width:100%;
+	}
+
+	.sidebar-list{
+		width:100%;
+	}
+	
 }
 
 /* Portrait tablet to landscape and desktop */

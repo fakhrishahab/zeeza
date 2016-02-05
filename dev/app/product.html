@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="zeeza">
 	<head>
 		<title>Zeeza Butik - Kids Warehouse</title>
 		<meta charset="utf-8">
@@ -9,94 +9,32 @@
 
 		<link type="text/css" rel="stylesheet" href="./assets/styles/style.css">
 		<link type="text/css" rel="stylesheet" href="./assets/styles/font_zeeza.css">
+
+		<script src="./script/lib/angular.min.js"></script>
+		<script src="./script/app.js"></script>
 	</head>
 	<body>
-		<header>
-			<div class="header-wrapper">
-				<div class="header-logo">
-					<a href="index.html"><img src="./assets/images/logo_zeeza.png" align="middle"></a>
-				</div>
+		<div ng-include src="'partials/header.html'"></div>
+		<div ng-include src="'partials/contact_header.html'"></div>
+		<div ng-include src="'partials/navigate_menu.html'"></div>
 
-				<div class="header-menu">
-					<ul>
-						<li>Cara Pemesanan</li>
-						<li>Daftar Reseller</li>
-						<li>Testimonial</li>
-						<li>Sahabat Zeeza</li>
-						<li>FAQ</li>
-					</ul>
-				</div>
+		<!-- <section class="slide-wrapper">			
+			<div class="slide-img">
+				<img src="./assets/images/header_img.png" alt="">
 			</div>
-		</header>
-		<section class="contact-header">
-			<div class="contact-header-wrapper">
-				<ul class="list-contact">
-					<li>
-						<div><img src="./assets/images/logo_whatsapp.png"></div>
-						<div>0857 2012 3245</div>
-					</li>
-					<li>
-						<div><img src="./assets/images/logo_bbm.png"></div>
-						<div>52 94 87 8A</div>
-					</li>
-					<li>
-						<div><img src="./assets/images/logo_line.png"></div>
-						<div>ZeezaButik</div>
-					</li>
-					<li>
-						<div><img src="./assets/images/logo_instagram.png"></div>
-						<div>#Zeeza_Butik</div>
-					</li>
-				</ul>
+		</section> -->
+
+		<section>
+			<div class="flash-wrapper">
+				<div class="flash-news">Dapatkan Promo <span class="highlight">"buy 3 get 1"</span> dengan minimal pembelian rp. 250.000,-</div>
 			</div>
 		</section>
-
-		<section class="navbar-wrapper">
-			<nav class="navbar-category">
-				<ul>
-					<li><a href="">Baby girl<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a href="">headband</a></li>
-							<li><a href="">baju</a></li>
-							<li><a href="">prewalker</a></li>
-						</ul>
-					</li>
-					<li><a href="">Baby boy<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a href="">baju</a></li>
-							<li><a href="">prewalker</a></li>
-						</ul>
-					</li>
-					<li><a href="">girl's room<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a href="">atasan</a></li>
-							<li><a href="">rok & celana</a></li>
-							<li><a href="">jaket & rompi</a></li>
-							<li><a href="">piyama</a></li>
-							<li><a href="">dress</a></li>
-							<li><a href="">baju muslim</a></li>
-							<li><a href="">Aksesoris</a></li>
-						</ul>
-					</li>
-					<li><a href="">boy's room<span class="icon-angle-down"></span></a>
-						<ul>
-							<li><a href="">Kemeja & Polo shirt</a></li>
-							<li><a href="">jaket & rompi</a></li>
-							<li><a href="">baju</a></li>
-							<li><a href="">piyama</a></li>
-							<li><a href="">celana</a></li>
-							<li><a href="">Aksesoris</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</section>		
 
 		<section>
 			<div class="content-product-wrapper">
 				<div class="grid-container push-top-bottom">
 					<div class="row">
-						<div class="col-3">
+						<div class="grid-col-3 grid-col-sm-12" id="section-category">
 							<div class="filter-product">
 								<span class="sidebar-header">
 									Category
@@ -130,7 +68,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-9">
+						<div class="grid-col-9 grid-col-sm-12" id="section-product">
 							<div class="product-search">
 								<div class="form-horizontal">
 									<span>Sort by</span>
@@ -150,20 +88,85 @@
 
 							<div class="grid-container push-top">
 								<div class="row">
-									<div class="col-4">
-										<div class="product-container">
-											
-										</div>
+									<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container">
+										<a href="product_detail.html">
+											<div class="product-detail">
+												<div class="product-image detail-image2" style="background-image:url(./assets/images/product/1.jpg)"></div>
+												<div class="product-description">
+													<span class="product-name">Atasan</span>
+													<span class="product-size">0 - 12 bln</span>
+													<span class="product-price">Rp. 120.000,-</span>
+													<span class="product-price-disc">Rp. 80.000,-</span>
+													<div class="new-product">
+														NEW
+													</div>
+												</div>
+											</div>
+										</a>
 									</div>
-									<div class="col-4">
-										<div class="product-container">
-											
-										</div>
+									<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container">
+										<a href="product_detail.html">
+											<div class="product-detail">
+												<div class="product-image detail-image2" style="background-image:url(./assets/images/product/1.jpg)"></div>
+												<div class="product-description">
+													<span class="product-name">Atasan</span>
+													<span class="product-size">0 - 12 bln</span>
+													<span class="product-price">Rp. 120.000,-</span>
+													<span class="product-price-disc">Rp. 80.000,-</span>
+													<div class="new-product">
+														NEW
+													</div>
+												</div>
+											</div>
+										</a>
 									</div>
-									<div class="col-4">
-										<div class="product-container">
-											
-										</div>
+									<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container">
+										<a href="product_detail.html">
+											<div class="product-detail">
+												<div class="product-image detail-image2" style="background-image:url(./assets/images/product/1.jpg)"></div>
+												<div class="product-description">
+													<span class="product-name">Atasan</span>
+													<span class="product-size">0 - 12 bln</span>
+													<span class="product-price">Rp. 120.000,-</span>
+													<span class="product-price-disc">Rp. 80.000,-</span>
+													<div class="new-product">
+														NEW
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container">
+										<a href="product_detail.html">
+											<div class="product-detail">
+												<div class="product-image detail-image2" style="background-image:url(./assets/images/product/1.jpg)"></div>
+												<div class="product-description">
+													<span class="product-name">Atasan</span>
+													<span class="product-size">0 - 12 bln</span>
+													<span class="product-price">Rp. 120.000,-</span>
+													<span class="product-price-disc">Rp. 80.000,-</span>
+													<div class="new-product">
+														NEW
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container">
+										<a href="product_detail.html">
+											<div class="product-detail">
+												<div class="product-image detail-image2" style="background-image:url(./assets/images/product/1.jpg)"></div>
+												<div class="product-description">
+													<span class="product-name">Atasan</span>
+													<span class="product-size">0 - 12 bln</span>
+													<span class="product-price">Rp. 120.000,-</span>
+													<span class="product-price-disc">Rp. 80.000,-</span>
+													<div class="new-product">
+														NEW
+													</div>
+												</div>
+											</div>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -203,4 +206,8 @@
 		</footer>
 	</body>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./script/script.js"></script>
+	<script>
+		console.log($params2('id'))
+	</script>
 </html>
