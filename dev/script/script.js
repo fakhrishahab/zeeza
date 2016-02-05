@@ -53,6 +53,34 @@ $(document).ready(function(){
 })
 
 $(window).bind('resize',function(){
-	console.log('yes')
 	mobileAdapt()
+})
+
+function route(name, callback){
+	var base = $("base").prop("href");
+	var fullurl = document.location.href;
+	var path = fullurl.replace(base,"");
+	var end_point = path.split('.')[0]
+
+	if(typeof callback == 'function'){
+		callback(end_point)	
+	}
+		
+}
+
+var script = [
+	'./test.js'
+]
+
+route('product', function(data){
+	// console.log(data)
+	// var s = document.body.firstChild;
+	// console.log(document.body.firstChild)
+	
+	// for(var i=0; i < script.length; i++){
+	// 	var link = document.createElement('script')
+	// 	link.src = script[i];
+	// 	s.parentNode.insertBefore(link, s);
+	// 	document.head.appendChild('<script></scrp')
+	// }
 })
