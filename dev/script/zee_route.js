@@ -6,15 +6,17 @@ function route(name, callback){
 	
 	if(end_point == name){
 		var string = path.split('?')[1];
-
-		var param = string.replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];	
+		
+		if(string){
+			var param = string.replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];		
+		}		
 
 		if(typeof callback == 'function'){
 			callback(end_point, param)	
 		}			
 	}	
 }
-
+	
 var script = [
 	'./test.js'
 ]
