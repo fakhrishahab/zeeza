@@ -23,65 +23,78 @@ var globalScript = [
 	'zee_cookies.js'
 ]
 
-function route(name, config){
-	var base = $("base").prop("href");
-	var fullurl = document.location.href;
-	var path = fullurl.replace(base,"");
-	var end_point = path.split('.')[0];
-	
-	if(end_point == name){
 
-		var string = path.split('?')[1];
+$(window).load(function(){
+	function route(name, config){
+		var base = $("base").prop("href");
+		var fullurl = document.location.href;
+		var path = fullurl.replace(base,"");
+		var end_point = path.split('.')[0];
 		
-		if(string){
-			var param = string.replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];		
-		}		
+		if(end_point == name){
 
-		if(typeof callback == 'function'){
-			callback(end_point, param)	
-		}			
+			var string = path.split('?')[1];
+			
+			if(string){
+				var param = string.replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];		
+			}		
+
+			if(typeof callback == 'function'){
+				callback(end_point, param)	
+			}			
 
 
-		var script='';
-		for(var x=0; x<globalScript.length;x++){
-			script += '<script src="./script/'+globalScript[x]+'"></script>'
-		}
+			var script='';
+			for(var x=0; x<globalScript.length;x++){
+				script += '<script src="./script/'+globalScript[x]+'"></script>'
+			}
 
-		for(var i=0; i < config.script.length;i++){
-			script += '<script src="./script/'+config.script[i]+'"></script>'
-		}
-		$('body').append(script);
-	}	
-	
-	// var script2='';
-	// for(var i=0; i<config.script.length;i++){
-	// 	script2 += '<script src="./script/'+config.script[i]+'"></script>'
-	// }
-	// $('body').append(script2);
+			for(var i=0; i < config.script.length;i++){
+				script += '<script src="./script/'+config.script[i]+'"></script>'
+			}
+			$('body').append(script);
+		}	
+		
+		// var script2='';
+		// for(var i=0; i<config.script.length;i++){
+		// 	script2 += '<script src="./script/'+config.script[i]+'"></script>'
+		// }
+		// $('body').append(script2);
 
-	
-}
+		
+	}
 
-route('',{
-	script : [
-		'app/home.js'
-	]
-})
+	route('',{
+		script : [
+			'app/home.js'
+		]
+	})
 
-route('product', {
-	script : [
-		'app/product.js'
-	]
-})
+	route('product', {
+		script : [
+			'app/product.js',
+			'app/side_filter.js'
+		]
+	})
 
-route('product_detail', {
-	script : [
-		'app/product_detail.js'
-	]
-})
+	route('product_detail', {
+		script : [
+			'app/product_detail.js',
+			'app/side_filter.js'
+		]
+	})
 
-route('information', {
-	script : [
-		'app/information.js'
-	]
+	route('information', {
+		script : [
+			'app/information.js',
+			'app/side_filter.js'
+		]
+	})
+
+	route('search', {
+		script : [
+			'app/search.js',
+			'app/side_filter.js'
+		]
+	})
 })

@@ -9,6 +9,7 @@ $.ajax({
 				$('li#menu_'+data[i].id_category+' ul').append('<li><a href="product.html?id='+data[i].child[x].id_type+'">'+data[i].child[x].name+'</a></li>')
 			}			
 		}
+
 	},
 	error:function(status){
 

@@ -136,6 +136,24 @@
 		}
 	}
 
+	.search-product{
+		position:relative;
+		width:100%;
+
+		div{
+			input{
+				width:150px;
+			}
+		}
+
+		div.search-input{
+			position:relative;
+			display:block;
+			visibility:visible;
+			opacity:1;
+		}
+	}
+
 	.flash-wrapper{
 		float:left;
 	}
