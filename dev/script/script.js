@@ -4,7 +4,8 @@ var constant = {
 	// 'API' : 'http://192.168.1.2/zeeza_api/',
 	'MENU' : {
 		'HEAD_MENU' : 1,
-		'CONTENT_MENU' : 2
+		'CONTENT_MENU' : 2,
+		'FLASH_CONTENT' : 5
 	},
 	'SORT' : {
 		'PRICE_MIN' : '1',
@@ -93,14 +94,20 @@ $(document).ready(function(){
 		url:constant.API+'menu',
 		async:true,
 		success:function(data){
+			console.log(data)
 			var head_menu = _.where(data, {menu:constant.MENU.HEAD_MENU})
 			var contact_menu = _.where(data, {menu:constant.MENU.CONTENT_MENU})
+			var flash_content = _.where(data, {menu:constant.MENU.FLASH_CONTENT})
 			for(var i=0; i < head_menu.length; i++){
 				$('#head_menu').append('<li><a href="information.html?id='+head_menu[i].id+'">'+head_menu[i].name+'</a></li>')
 			}
 
 			for(var i=0; i < contact_menu.length; i++){
 				$('#contact_menu').append('<li><div><img src="./assets/images/logo_'+contact_menu[i].name+'.png"/></div><div>'+contact_menu[i].content+'</div></li>')
+			}
+
+			for(var i=0; i<flash_content.length;i++){
+				$('.flash-news').append(flash_content[i].content+'<font style="color:#000">   | </font>')
 			}
 		}
 	})	

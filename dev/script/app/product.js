@@ -17,6 +17,7 @@ function get_product(offset, limit){
 		type:'GET',
 		url:link,
 		success:function(data){
+			console.log(data)
 			total = data.count;
 			opened = data.result.length;
 
@@ -41,9 +42,12 @@ function check_pagination(total){
 	var prev = $('button#btn-prev')
 	var next = $('button#btn-next')
 	var total_page = parseInt(total/limit);
+	
 	if(page <= 0){
+		if(total_page > 1){
+			$('button#btn-next').prop('disabled', false)
+		}
 		$('button#btn-prev').prop('disabled', true)		
-		// $('button#btn-next').prop('disabled', true)	
 	}else{
 		$('button#btn-prev').prop('disabled', false)		
 		if(page < total_page-1){

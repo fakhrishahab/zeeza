@@ -33,6 +33,9 @@ function check_pagination(total){
 	var total_page = parseInt(total/limit);
 
 	if(page <= 0){
+		if(total_page > 1){
+			$('button#btn-next').prop('disabled', false)
+		}
 		$('button#btn-prev').prop('disabled', true)		
 	}else{
 		$('button#btn-prev').prop('disabled', false)		

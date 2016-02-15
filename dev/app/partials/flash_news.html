@@ -1,5 +1,27 @@
 <section>
 	<div class="flash-wrapper">
-		<div class="flash-news">Dapatkan Promo <span class="highlight">"buy 3 get 1"</span> dengan minimal pembelian rp. 250.000,-</div>
+		<div class="flash-news marquee"></div>
 	</div>
 </section>
+<style>
+	/* Make it a marquee */
+.marquee {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
+
+</style>
