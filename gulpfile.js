@@ -1,7 +1,10 @@
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	sass = require('gulp-sass'),
-	del = require('del');
+	del = require('del'),
+	uglify = require('gulp-uglify'),
+	minify_css = require('gulp-minify-css'),
+	imagemin = require('gulp-imagemin');
 
 
 var defaultTasks = [
@@ -20,6 +23,7 @@ gulp.task('html_view', function(){
 
 gulp.task('styles', function(){
 	return gulp.src('./dev/assets/styles/**/*.css')
+		.pipe(minify_css())
 		.pipe(gulp.dest('public/assets/styles'))
 })
 
@@ -27,6 +31,7 @@ gulp.task('style_sass', function(){
 	return gulp.src('./dev/assets/styles/scss/*.scss')
 		.pipe(sass({outputStyle: 'compressed'}))
 		.pipe(sass.sync().on('Error', sass.logError))
+		.pipe(minify_css())
 		.pipe(gulp.dest('public/assets/./styles'))
 })
 
@@ -37,11 +42,15 @@ gulp.task('fonts', function(){
 
 gulp.task('script', function(){
 	return gulp.src('./dev/script/**/*.*')
+		.pipe(uglify())
 		.pipe(gulp.dest('public/script'))
 })
 
 gulp.task('images', function(){
 	return gulp.src('./dev/assets/images/**/*.*')
+		.pipe(imagemin({
+			progressive: true
+		}))
 		.pipe(gulp.dest('public/assets/images'))
 })
 

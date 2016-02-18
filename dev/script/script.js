@@ -1,7 +1,7 @@
 var constant = {
 	'SITE' : $("base").prop("href"),
-	'API' : 'http://localhost/zeeza_api/',
-	// 'API' : 'http://192.168.1.2/zeeza_api/',
+	// 'API' : 'http://localhost/zeeza_api/',
+	'API' : 'http://192.168.3.63/zeeza_api/',
 	'MENU' : {
 		'HEAD_MENU' : 1,
 		'CONTENT_MENU' : 2,
