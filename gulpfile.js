@@ -42,7 +42,7 @@ gulp.task('fonts', function(){
 
 gulp.task('script', function(){
 	return gulp.src('./dev/script/**/*.*')
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest('public/script'))
 })
 

@@ -9,6 +9,8 @@
 			margin:0;
 		}
 	}
+
+	
 }
 
 /* Landscape phones and down */
@@ -49,13 +51,24 @@
 	}
 
 	.contact-header{
-		max-height:30px;
+		max-height:70px;
 	}
 
 	.contact-header-wrapper{
 		max-width:100%;
 		padding:0;
 	}	
+
+	.content-list{
+	
+		div{
+			font-size: 13px;
+
+			img{
+				height:20px;
+			}
+		}
+	}
 
 	.list-contact{
 		width:100%;
@@ -134,24 +147,6 @@
 					}
 				}
 			}
-		}
-	}
-
-	.search-product{
-		position:relative;
-		width:100%;
-
-		div{
-			input{
-				width:150px;
-			}
-		}
-
-		div.search-input{
-			position:relative;
-			display:block;
-			visibility:visible;
-			opacity:1;
 		}
 	}
 

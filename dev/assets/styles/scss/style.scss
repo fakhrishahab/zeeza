@@ -132,9 +132,27 @@ footer{
 }
 
 .contact-header-wrapper{
-	max-width:1200px;
+	width:100%;
 	margin:0 auto;
+	height:100%;
 	text-align:center;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	resize: both;
+}
+
+.content-list{
+	
+	div{
+		display:inline-block;
+		margin-right:20px;
+
+		img{
+			vertical-align: middle;
+			margin-right:10px;
+		}
+	}
 }
 
 .list-contact{
@@ -260,8 +278,12 @@ footer{
 		float:right;
 		font-size:20px;
 		box-sizing:border-box;
-		width:300px;
+		// width:300px;
+		height:50px;
 		padding-left:15px;
+		position:relative;
+		right:0;
+		top:0;
 
 		div{
 			margin:0;
@@ -283,12 +305,15 @@ footer{
 		}
 
 		div.search-input{
-			position:absolute;
+			position:relative;
 			visibility:hidden;
 			opacity:0;
-			right:0;
-			top:8px;
+			display:block;
+			right:-200px;
+			border:1px solid #ccc;
+			box-sizing:border-box;
 			z-index:0;
+			top:7px;
 			transition:all 0.2s linear;
 			-webkit-transition:all 0.2s linear;
 		}
@@ -296,7 +321,8 @@ footer{
 		div.show-input{
 			visibility:visible;
 			opacity:1;
-			right:130px;
+			right:60px;
+			top:7px;
 			z-index:3;
 			transition:all 0.2s linear;
 			-webkit-transition:all 0.2s linear;
@@ -304,7 +330,12 @@ footer{
 
 		div[class*=icon]{
 			float:right;
+			max-height:50px;
+			top:-37px;
+			display:inline-block;
+			position:relative;
 			padding:15px;
+			z-index:4;
 			background-color:$greyDark;
 		}
 	}

@@ -1,7 +1,7 @@
 var constant = {
 	'SITE' : $("base").prop("href"),
-	// 'API' : 'http://localhost/zeeza_api/',
-	'API' : 'http://192.168.3.63/zeeza_api/',
+	'API' : 'http://localhost/zeeza_api/',
+	// 'API' : 'http://192.168.3.63/zeeza_api/',
 	'MENU' : {
 		'HEAD_MENU' : 1,
 		'CONTENT_MENU' : 2,
@@ -103,7 +103,8 @@ $(document).ready(function(){
 			}
 
 			for(var i=0; i < contact_menu.length; i++){
-				$('#contact_menu').append('<li><div><img src="./assets/images/logo_'+contact_menu[i].name+'.png"/></div><div>'+contact_menu[i].content+'</div></li>')
+				$('#contact_menu').append('<div><img src="./assets/images/logo_'+contact_menu[i].name+'.png" alt="" align="middle"><span>'+contact_menu[i].content+'</span></div>')
+				// $('#contact_menu').append('<li><div><img src="./assets/images/logo_'+contact_menu[i].name+'.png"/></div><div>'+contact_menu[i].content+'</div></li>')
 			}
 
 			for(var i=0; i<flash_content.length;i++){
@@ -137,6 +138,7 @@ $(document).ready(function(){
 
 	$('#icon-search').on('click', function(){
 		$('div.search-input').toggleClass('show-input');
+		console.log('')
 	})
 
 	$('#btn-search').on('click', function(){
