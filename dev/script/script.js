@@ -74,11 +74,14 @@ $(document).ready(function(){
 		$(this).removeClass('overflow-hide')
 	})
 
-	
+	var includeTemp = $('div').attr('append-template');
+	$('div[append-template]').each(function(key, value){		
+		$.get($(this).attr('append-template'), function(data){
+			$(value).append(data)
+		})
+	})
 
-	// $('.menu-toggle .header-wrapper').on('click', function(e){
-		
-	// })
+	// console.log($('div').attr('append-template'))
 
 	$('.navbar-wrapper').click(function(e){
 		e.stopPropagation();
@@ -140,13 +143,6 @@ $(document).ready(function(){
 		$('div.search-input').toggleClass('show-input');
 		console.log('')
 	})
-
-	$('#btn-search').on('click', function(){
-		var code = $('input[name=input-code]').val();
-		window.location.href=constant.SITE+'search.html?code='+code;
-		// console.log(code)
-	})
-
 
 })
 

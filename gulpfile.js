@@ -4,7 +4,9 @@ var gulp = require('gulp'),
 	del = require('del'),
 	uglify = require('gulp-uglify'),
 	minify_css = require('gulp-minify-css'),
-	imagemin = require('gulp-imagemin');
+	minify_html = require('gulp-minify-html'),
+	imagemin = require('gulp-imagemin'),
+	sitemap = require('gulp-sitemap');
 
 
 var defaultTasks = [
@@ -17,7 +19,8 @@ var defaultTasks = [
 ]
 
 gulp.task('html_view', function(){
-	return gulp.src('./dev/app/**/*.*')
+	return gulp.src('./dev/app/**/*.html')
+		.pipe(minify_html({ empty: true }))
 		.pipe(gulp.dest('public/'))
 })
 
@@ -42,7 +45,7 @@ gulp.task('fonts', function(){
 
 gulp.task('script', function(){
 	return gulp.src('./dev/script/**/*.*')
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('public/script'))
 })
 

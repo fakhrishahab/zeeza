@@ -15,4 +15,13 @@
 		</div>
 	</nav>	
 </section>	
+<script>
+	$('#icon-search').on('click', function(){
+		$('div.search-input').toggleClass('show-input');
+	})
+	$('#btn-search').on('click', function(){
+		var code = $('input[name=input-code]').val();
+		window.location.href=constant.SITE+'search.html?code='+code;
+	})
+</script>
 <!--<script src="./script/app/nav_script.js"></script>-->

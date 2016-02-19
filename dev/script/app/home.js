@@ -1,8 +1,8 @@
 $.ajax({
 	method:'GET',
 	url:constant.API+'product',
+	async:true,
 	success:function(data){
-		console.log(data)
 		for(var i =0; i < data.length; i++){
 			if(diffDay(data[i].created_date) < 30){
 				var newProduct = '<span class="new-product">NEW</span>'

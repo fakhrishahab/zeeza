@@ -1,30 +1,25 @@
 <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
-<html ng-app="zeeza">
+<html lang="en">
 	<head>
-		<title>Zeeza Butik - Branded Kids Warehouse</title>
+		<title>Zeeza Butik - Menjual Baju Anak dan Bayi Lengkap</title>
 		<base href="http://localhost/zeeza/public/"/>
-		<meta http-equiv="Cache-Control" content="public" />
+		<meta http-equiv="Cache-Control" content="public; max-age=86400" />
 	    <meta http-equiv="Expires" content="500000" />
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	    <meta http-equiv="content-language" content="id-ID" />
 	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	    <meta name="description" content="Selamat Datang di ZeezaButik.com, Online Store yang menjual beraneka ragam perlengkapan bayi dari pakaian hingga aksesoris. Produk yang kami tawarkan adalah produk dengan kualitas terbaik dari brand-brand ternama">
-	    <meta name="keywords" content="Toko Online Baju Bayi dan Anak Super Murah, Menjual Perlengkapan Bayi dan Anak, Baju Branded untuk Bayi dan Anak, Oshkosh, Cherokee, Carter, Circo, Jumper, Dress Bayi, Sweater Bayi, Jaket Bayi, Celana Bayi, Kemeja Bayi, Piyama Bayi, Prewalker Bayi">		
-	    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/ico"/>
-	    <!-- <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico"/> -->
+	    <meta name="description" content="Selamat Datang di ZeezaButik.com, Online Store yang menjual beraneka ragam perlengkapan anak dan bayi dari baju, celana, pakaian hangat, jeans anak hingga aksesoris anak dan bayi. Produk yang kami tawarkan adalah produk dengan kualitas terbaik dari brand-brand ternama">
+		<meta name="keywords" content="Toko Online Baju Bayi dan Anak Super Murah, Menjual Perlengkapan Bayi dan Anak, Baju Branded untuk Bayi dan Anak, Oshkosh, Cherokee, Carter, Circo, Jumper, Dress Anak dan Bayi, Sweater Anak dan Bayi, Jaket Anak dan Bayi, Celana Anak dan Bayi, Kemeja Anak dan Bayi, Piyama Anak dan Bayi, Prewalker Bayi">		    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/ico"/>
 
 		<link type="text/css" rel="stylesheet" href="./assets/styles/style.css">
 		<link type="text/css" rel="stylesheet" href="./assets/styles/font_zeeza.css">
-		
-		<script src="./script/lib/angular.min.js"></script>
-		<script src="./script/app.js"></script>
 	</head>
 	<body>
-		<div ng-include src="'partials/header.html'"></div>
-		<div ng-include src="'partials/contact_header.html'"></div>
-		<div ng-include src="'partials/navigate_menu.html'"></div>	
+		<div append-template="partials/header.html"></div>
+		<div append-template="partials/contact_header.html"></div>
+		<div append-template="partials/navigate_menu.html"></div>
 
 
 		<section class="slide-wrapper">			
@@ -37,48 +32,33 @@
 				</picture>
 			</div>
 		</section>
-
-		<div ng-include src="'partials/flash_news.html'"></div>
+		
+		<div append-template="partials/flash_news.html"></div>
 
 		<section>
 			<div class="product-home">
 				<div class="grid-container">
 					<div class="row push-top" id="latest_product">
-						<!-- <div class="grid-col-2 grid-col-sm-6 grid-col-xs-12 product-container">
-							<a href="product_detail.html">
-								<div class="product-detail">
-									<div class="product-image" style="background-image:url(./assets/images/product/1.jpg)"></div>
-									<div class="product-description">
-										<span class="product-name">Atasan</span>
-										<span class="product-size">0 - 12 bln</span>
-										<span class="product-price">Rp. 120.000,-</span>
-										<span class="product-price-disc">Rp. 80.000,-</span>
-										<span class="new-product">
-											NEW
-										</span>
-									</div>
-								</div>
-							</a>
-						</div> -->
 					</div>
 				</div>
 			</div>
 		</section>
 
-		
-		<div ng-include src="'partials/brand.html'"></div>
-		<div ng-include src="'partials/footer.html'"></div>
+		<div append-template="partials/brand.html"></div>
+		<div append-template="partials/footer.html"></div>
 		
 	</body>	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-74059271-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
 	<script src="./script/lib/jquery.min.js"></script>
-	<!--<script src="./script/lib/underscore-min.js"></script>-->
-	<!--<script src="./script/script.js"></script>
-	<!--<script src="./script/zee_cookies.js"></script>-->
 	<script src="./script/zee_route.js"></script>
 
-	<script>
-		// routie('product/:id', function(id) {
-		//     location.href="product.html?id="+id;
-		// });		
-	</script>
 </html>

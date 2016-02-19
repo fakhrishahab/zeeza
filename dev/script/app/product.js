@@ -17,7 +17,6 @@ function get_product(offset, limit){
 		type:'GET',
 		url:link,
 		success:function(data){
-			console.log(data)
 			total = data.count;
 			opened = data.result.length;
 
@@ -71,7 +70,6 @@ $('.padding-num button').click(function(){
 $('select[name=sort_product]').on('change', function(){
 	switch($(this).val()){
 		case constant.SORT.PRICE_MIN :
-			console.log('PRICE_MIN')
 			dataProduct.result = _.sortBy(dataProduct.result, 'price_disc');
 			break;
 		case constant.SORT.PRICE_MAX :
