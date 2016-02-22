@@ -81,7 +81,11 @@ div[class*=grid-col-]{
 }
 
 
-
+@media (max-width: 850px) {
+	.grid-col-md-3{
+		width:24.64%;
+	}
+}
 
 @media (max-width: 540px) {
 	.grid-col-sm-6{
