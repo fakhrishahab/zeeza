@@ -94,7 +94,11 @@ function generateView(data){
 		}else{
 			newProduct = '';
 		}
-		$('#product-filter').append('<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container"><a href="product_detail.html?id='+data.result[i].id+'"><div class="product-detail"><div class="product-image detail-image2" style="background-image:url('+data.result[i].image+'")></div><div class="product-description"><span class="product-name">'+data.result[i].name+'</span><span class="product-size">'+data.result[i].size+'</span><span class="product-size">RES  : '+data.result[i].price_reseller+'</span><span class="product-price">Rp. '+data.result[i].price+',-</span><span class="product-price-disc">Rp. '+data.result[i].price_disc+',-</span><span class="product-code">CODE : '+data.result[i].code+'</span>'+newProduct+'</div></div></a></div>')
+		var size='';
+		for(var x=0; x<data.result[i].size.length; x++){
+			size += data.result[i].size[x].name+', ';
+		}
+		$('#product-filter').append('<div class="grid-col-4 grid-col-sm-6 grid-col-xs-12 product-container"><a href="product_detail.html?id='+data.result[i].id+'"><div class="product-detail"><div class="product-image detail-image2" style="background-image:url('+data.result[i].image+'")></div><div class="product-description"><span class="product-name">'+data.result[i].name+'</span><span class="product-size">'+size+'</span><span class="product-size">RES  : '+data.result[i].price_reseller+'</span><span class="product-price">Rp. '+data.result[i].price+',-</span><span class="product-price-disc">Rp. '+data.result[i].price_disc+',-</span><span class="product-code">CODE : '+data.result[i].code+'</span>'+newProduct+'</div></div></a></div>')
 	}
 }
 
