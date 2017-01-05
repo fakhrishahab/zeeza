@@ -58,7 +58,8 @@ gulp.task('images', function(){
 })
 
 gulp.task('clean', function(cb){
-	del(defaultTasks, cb)
+	console.log('clean')
+	return del(defaultTasks, cb)
 })
 
 gulp.task('watch', function(){
